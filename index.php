@@ -41,7 +41,7 @@ function print_html()
 
     <body>
       <h1>Crypto Online</h1>
-      <form method="post" action="crypto-online.php">
+      <form method="post" action="index.php">
           Username: <input type="text" name="username"><br>
           Password: <input type="text" name="password"><br>
           <input type="submit" name="login" value="LOGIN">

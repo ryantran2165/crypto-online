@@ -55,7 +55,7 @@ function print_html()
           Password: <input type="text" name="password" maxlength="32"><br>
           <input type="submit" name="register" value="REGISTER">
       </form>
-      <p>Or <a href="crypto-online.php">login</a>.</p>
+      <p>Or <a href="index.php">login</a>.</p>
     </body>
     </html>
 _END;
@@ -146,7 +146,7 @@ function register_user($conn, $email, $username, $password)
     if (!$result) die(mysql_fatal_error());
     
     $stmt->close();
-    echo '<script>window.location.href = "crypto-online.php";</script>';
+    echo '<script>window.location.href = "index.php";</script>';
 }
 
 ?>
