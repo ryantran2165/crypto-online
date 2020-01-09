@@ -50,9 +50,9 @@ function print_html($username)
             <form class="mb-4" method="post" action="history.php">
               <div class="form-group">
                 <a href="main.php">Go to Decryptoid</a> or 
-                <input type="submit" name="logout" value="LOGOUT">
+                <input class="btn btn-primary" type="submit" name="logout" value="LOGOUT">
               </div>
-              <input type="submit" name="clear_history" value="CLEAR HISTORY">
+              <input class="btn btn-primary btn-lg" type="submit" name="clear_history" value="CLEAR HISTORY">
             </form>
           </div>
         </div>

@@ -55,7 +55,7 @@ function print_html()
               <div class="form-group">
                 <input placeholder="Password" type="text" name="password" required>
               </div>
-              <input type="submit" name="login" value="LOGIN">
+              <input class="btn btn-primary btn-lg" type="submit" name="login" value="LOGIN">
             </form>
             <p>Or <a href="php/register.php">register</a>.</p>
           </div>

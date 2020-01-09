@@ -16,3 +16,11 @@ input[type="text"], textarea {
 input[type="text"]:focus, textarea:focus {
   border: 3px solid #7fffd4;
 }
+
+.btn {
+  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3),
+    0 0 2.5rem rgba(0, 0, 0, 0.1) inset;
+  border-color: #7fffd4;
+  background-color: #7fffd4;
+  color: #222;
+}

@@ -66,7 +66,7 @@ function print_html()
               <div class="form-group">
                 <input placeholder="Password" type="text" name="password" maxlength="32" required>
               </div>
-                <input type="submit" name="register" value="REGISTER">
+                <input class="btn btn-primary btn-lg" type="submit" name="register" value="REGISTER">
             </form>
             <p>Or <a href="../index.php">login</a>.</p>
           </div>

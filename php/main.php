@@ -85,7 +85,7 @@ function print_html($username)
             <h5>Logged in as $username.</h5>
             <form class="mb-4" method="post" action="main.php">
               <a href="history.php">Go to History</a> or 
-              <input type="submit" name="logout" value="LOGOUT">
+              <input class="btn btn-primary" type="submit" name="logout" value="LOGOUT">
             </form>
             <form method="post" action="main.php" enctype="multipart/form-data" onSubmit="return validateCrypto(this)">
               <div class="form-group">
@@ -102,7 +102,7 @@ function print_html($username)
               </div>
               <div class="form-group">
                 <input placeholder="Key" type="text" name="key" id="key" required>
-                <input type="button" name="random_key" value="RANDOM" onClick="getRandomKey()">
+                <input class="btn btn-primary" type="button" name="random_key" value="RANDOM" onClick="getRandomKey()">
               </div>
               <div class="form-group">
                 <textarea placeholder="Text input" rows="10" cols="50" name="text_input"></textarea>
@@ -111,7 +111,7 @@ function print_html($username)
                 <p>or select text (.txt) file:</p>
                 <input type="file" name="file_input" size="10">
               </div>
-              <input type="submit" name="run" value="RUN">
+              <input class="btn btn-primary btn-lg" type="submit" name="run" value="RUN">
             </form>
           </div>
         </div>
