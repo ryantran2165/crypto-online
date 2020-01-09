@@ -48,6 +48,7 @@ function print_html()
         <div class="row text-center">
           <div class="col">
             <h1 class="mb-4">Crypto Online</h1>
+            <h5 class="mb-4">Web application for encrypting/decrypting from text input or text file.<br>Available ciphers: Simple Substitution, Double Transposition, and RC4.</h5>
             <form method="post" action="index.php">
               <div class="form-group">
                 <input placeholder="Username" type="text" name="username" required>
