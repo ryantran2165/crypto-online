@@ -106,7 +106,7 @@ function print_html($username)
                 <input class="btn btn-primary" type="button" name="random_key" value="RANDOM" onClick="getRandomKey()">
               </div>
               <div class="form-group">
-                <textarea placeholder="Text input" rows="10" cols="50" name="text_input"></textarea>
+                <textarea class="form-control" placeholder="Text input" rows="10" name="text_input"></textarea>
               </div>
               <div class="form-group">
                 <p>or select text (.txt) file:</p>
