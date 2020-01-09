@@ -27,7 +27,7 @@ if (is_logged_in())
 }
 else
 {
-    echo '<script>window.location.href = "index.php";</script>';
+    echo '<script>window.location.href = "../index.php";</script>';
 }
 
 function print_html($username)

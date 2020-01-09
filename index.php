@@ -1,14 +1,14 @@
 <?php
 
-require_once 'login.php';
-require_once 'tools.php';
+require_once 'php/login.php';
+require_once 'php/tools.php';
 
 session_start();
 validate_session();
 
 if (is_logged_in())
 {
-    echo '<script>window.location.href = "main.php";</script>';
+    echo '<script>window.location.href = "php/main.php";</script>';
 }
 else
 {
@@ -46,7 +46,7 @@ function print_html()
           Password: <input type="text" name="password"><br>
           <input type="submit" name="login" value="LOGIN">
       </form>
-      <p>Or <a href="register.php">register</a>.</p>
+      <p>Or <a href="php/register.php">register</a>.</p>
     </body>
     </html>
 _END;
@@ -79,7 +79,7 @@ function login($conn)
         {
             $_SESSION['username'] = $username;
             $_SESSION['check'] = get_check_hash();
-            echo '<script>window.location.href = "main.php";</script>';
+            echo '<script>window.location.href = "php/main.php";</script>';
             $succes = true;
         }
     }

@@ -60,7 +60,7 @@ if (is_logged_in())
 }
 else
 {
-    echo '<script>window.location.href = "index.php";</script>';
+    echo '<script>window.location.href = "../index.php";</script>';
 }
 
 function print_html($username)
@@ -69,8 +69,8 @@ function print_html($username)
     <html>
     <head>
       <title>Crypto Online</title>
-      <script src="validate.js"></script>
-      <script src="random_key.js"></script>
+      <script src="../js/validate.js"></script>
+      <script src="../js/random_key.js"></script>
     </head>
 
     <body>
