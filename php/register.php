@@ -32,7 +32,7 @@ if (isset($_POST['register']))
     }
     else // Should not get here unless JS turned off or user manipulated site
     {
-        echo $fail;
+        echo "<h5 class='text-center pb-5'>$fail</h5>";
     }
     
     $conn->close();
@@ -43,19 +43,34 @@ function print_html()
     echo <<<_END
     <html>
     <head>
+      <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="css/styles.css" rel="stylesheet">
       <title>Crypto Online - Register</title>
       <script src="../js/validate.js"></script>
     </head>
 
     <body>
-      <h1>Register</h1>
-      <form method="post" action="register.php" onSubmit="return validateRegister(this)">
-          Email: <input type="text" name="email" maxlength="254"><br>
-          Username: <input type="text" name="username" maxlength="32"><br>
-          Password: <input type="text" name="password" maxlength="32"><br>
-          <input type="submit" name="register" value="REGISTER">
-      </form>
-      <p>Or <a href="../index.php">login</a>.</p>
+      <div class="container pt-5">
+        <div class="row text-center">
+          <div class="col">
+            <h1 class="mb-4">Register</h1>
+            <form method="post" action="register.php" onSubmit="return validateRegister(this)">
+              <div class="form-group">
+                <input placeholder="Email" type="text" name="email" maxlength="254" required>
+              </div>
+              <div class="form-group">
+                <input placeholder="Username" type="text" name="username" maxlength="32" required>
+              </div>
+              <div class="form-group">
+                <input placeholder="Password" type="text" name="password" maxlength="32" required>
+              </div>
+                <input type="submit" name="register" value="REGISTER">
+            </form>
+            <p>Or <a href="../index.php">login</a>.</p>
+          </div>
+        </div>
+      </div>
     </body>
     </html>
 _END;
@@ -92,7 +107,7 @@ function is_unique_email($conn, $email)
     {
         $stmt->free_result();
         $stmt->close();
-        echo 'That email is already being used, please try again.';
+        echo '<h5 class="text-center pb-5">That email is already being used, please try again.<
         return false;
     }
     
@@ -120,7 +135,7 @@ function is_unique_username($conn, $username)
     {
         $stmt->free_result();
         $stmt->close();
-        echo 'That username is already being used, please try again.';
+        echo '<h5 class="text-center pb-5">That username is already being used, please try again.<
         return false;
     }
     

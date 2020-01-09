@@ -52,7 +52,7 @@ if (is_logged_in())
         }
         else
         {
-            echo $fail;
+            echo "<h5 class='text-center pb-5'>$fail</h5>";
         }
     }
 
@@ -68,40 +68,52 @@ function print_html($username)
     echo <<<_END
     <html>
     <head>
+      <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="css/styles.css" rel="stylesheet">
       <title>Crypto Online</title>
       <script src="../js/validate.js"></script>
       <script src="../js/random_key.js"></script>
     </head>
 
     <body>
-      <h1>Crypto Online</h1>
-      <h4>Logged in as $username.</h4>
-      <form method="post" action="main.php">
-        <a href="history.php">Go to History</a> or 
-        <input type="submit" name="logout" value="LOGOUT">
-      </form>
-      <form method="post" action="main.php" enctype="multipart/form-data" onSubmit="return validateCrypto(this)">
-        Cipher:
-        <select name="cipher" id="cipher">
-            <option value="Simple Substitution">Simple Substitution</option>
-            <option value="Double Transposition">Double Transposition</option>
-            <option value="RC4">RC4</option>
-        </select>
-        <br>
-        <input type="radio" name="crypto_type" value="Encrypt" checked="checked"> Encrypt
-        <input type="radio" name="crypto_type" value="Decrypt"> Decrypt
-        <br>
-        Key: <input type="text" name="key" id="key">
-        <input type="button" name="random_key" value="RANDOM" onClick="getRandomKey()">
-        <br>
-        Text input:
-        <br>
-        <textarea rows="10" cols="50" name="text_input"></textarea>
-        <br>
-        or select text (.txt) file: <input type="file" name="file_input" size="10">
-        <br>
-        <input type="submit" name="run" value="RUN">
-      </form>
+      <div class="container pt-5">
+        <div class="row text-center">
+          <div class="col">
+            <h1 class="mb-4">Crypto Online</h1>
+            <h5>Logged in as $username.</h5>
+            <form class="mb-4" method="post" action="main.php">
+              <a href="history.php">Go to History</a> or 
+              <input type="submit" name="logout" value="LOGOUT">
+            </form>
+            <form method="post" action="main.php" enctype="multipart/form-data" onSubmit="return validateCrypto(this)">
+              <div class="form-group">
+                <label for="cipher">Cipher: </label>
+                <select name="cipher" id="cipher">
+                  <option value="Simple Substitution">Simple Substitution</option>
+                  <option value="Double Transposition">Double Transposition</option>
+                  <option value="RC4">RC4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="crypto_type" value="Encrypt" checked="checked"> Encrypt
+                <input type="radio" name="crypto_type" value="Decrypt"> Decrypt
+              </div>
+              <div class="form-group">
+                <input placeholder="Key" type="text" name="key" id="key" required>
+                <input type="button" name="random_key" value="RANDOM" onClick="getRandomKey()">
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Text input" rows="10" cols="50" name="text_input"></textarea>
+              </div>
+              <div class="form-group">
+                or select text (.txt) file: <input type="file" name="file_input" size="10">
+              </div>
+              <input type="submit" name="run" value="RUN">
+            </form>
+          </div>
+        </div>
+      </div>
     </body>
     </html>
 _END;
@@ -113,12 +125,12 @@ function run($conn, $username, $cipher, $crypto_type, $key, $input)
     $output = mysql_entities_fix_string($conn, crypto($cipher, $crypto_type, $key, $input));
     
     echo <<<_END
-    <p>
+    <h5 class="text-center pb-5">
       Cipher: $cipher | $crypto_type<br>
       Key: $key<br>
       Input: $input<br>
       Output: $output
-    </p>
+    </h5>
 _END;
     
     add_history($conn, $username, $cipher, $crypto_type, $input, $output);

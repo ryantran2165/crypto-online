@@ -25,7 +25,7 @@ else
     print_html();
     if (isset($_POST['login']) && !$success)
     {
-        echo 'Invalid username/password, please try again.';
+        echo '<h5 class="text-center pb-5">Invalid username/password, please try again.</h5>';
     }
 
     $conn->close();
@@ -36,17 +36,30 @@ function print_html()
     echo <<<_END
     <html>
     <head>
+      <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="css/styles.css" rel="stylesheet">
       <title>Crypto Online</title>
     </head>
 
     <body>
-      <h1>Crypto Online</h1>
-      <form method="post" action="index.php">
-          Username: <input type="text" name="username"><br>
-          Password: <input type="text" name="password"><br>
-          <input type="submit" name="login" value="LOGIN">
-      </form>
-      <p>Or <a href="php/register.php">register</a>.</p>
+      <div class="container pt-5">
+        <div class="row text-center">
+          <div class="col">
+            <h1 class="mb-4">Crypto Online</h1>
+            <form method="post" action="index.php">
+              <div class="form-group">
+                <input placeholder="Username" type="text" name="username" required>
+              </div>
+              <div class="form-group">
+                <input placeholder="Password" type="text" name="password" required>
+              </div>
+              <input type="submit" name="login" value="LOGIN">
+            </form>
+            <p>Or <a href="php/register.php">register</a>.</p>
+          </div>
+        </div>
+      </div>
     </body>
     </html>
 _END;
