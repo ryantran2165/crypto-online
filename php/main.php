@@ -107,9 +107,7 @@ function print_html($username)
               <div class="form-group">
                 <textarea placeholder="Text input" rows="10" cols="50" name="text_input"></textarea>
               </div>
-              <p>
-                or select text (.txt) file: <input type="file" name="file_input" size="10">
-              </p>
+              <p>or select text (.txt) file: <input type="file" name="file_input" size="10"></p>
               <input type="submit" name="run" value="RUN">
             </form>
           </div>
