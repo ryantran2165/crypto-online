@@ -107,7 +107,7 @@ function is_unique_email($conn, $email)
     {
         $stmt->free_result();
         $stmt->close();
-        echo '<h5 class="text-center pb-5">That email is already being used, please try again.<
+        echo '<h5 class="text-center pb-5">That email is already being used, please try again.</h5>';
         return false;
     }
     
@@ -135,7 +135,7 @@ function is_unique_username($conn, $username)
     {
         $stmt->free_result();
         $stmt->close();
-        echo '<h5 class="text-center pb-5">That username is already being used, please try again.<
+        echo '<h5 class="text-center pb-5">That username is already being used, please try again.</h5>';
         return false;
     }
     
