@@ -39,7 +39,13 @@ else
       <link href="../css/styles.css" rel="stylesheet">
     </head>
     <body>
-      <h5 class="text-center pt-5 pb-5">Not logged in or session timed out, please <a href="../index.php">login</a>.</h5>
+      <div class="container pt-5">
+        <div class="row text-center">
+          <div class="col">
+            <h5>Not logged in or session timed out, please <a href="../index.php">login</a>.</h5>
+          </div>
+        </div>
+      </div>
     </body>
     </html>
 _END;
