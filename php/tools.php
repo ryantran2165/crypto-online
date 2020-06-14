@@ -44,7 +44,9 @@ function check_logout()
     if ($_POST['logout'])
     {
         destroy_session_and_data();
+        return true;
     }
+    return false;
 }
 
 function is_logged_in()

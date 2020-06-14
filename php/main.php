@@ -7,7 +7,7 @@ require_once 'validate.php';
 
 session_start();
 validate_session();
-check_logout();
+$is_logout = check_logout();
 
 if (is_logged_in())
 {
@@ -58,9 +58,24 @@ if (is_logged_in())
 
     $conn->close();
 }
-else
+else if ($is_logout)
 {
     echo '<script>window.location.href = "../index.php";</script>';
+}
+else
+{
+    echo <<<_END
+    <html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="../css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+      <h5 class="text-center pt-5 pb-5">Not logged in or session timed out, please <a href="../index.php">login</a>.</h5>
+    </body>
+    </html>
+_END;
 }
 
 function print_html($username)
