@@ -1,7 +1,7 @@
 # Crypto Online
 
-• Created cryptography web app supporting 3 ciphers, secure user login/registration functionality, and web sessions  
-• Skills used: JavaScript, HTML, CSS, PHP, SQL, Git, Linux, MySQL, Bootstrap  
-• Check it out: https://crypto-online.herokuapp.com
+• Constructed full-stack cryptography web app supporting 3 ciphers and secure user login/registration using sessions  
+• JavaScript, SQL, HTML, CSS, PHP | Bootstrap | Git, Heroku, Linux, MySQL  
+• https://crypto-online.herokuapp.com
 
-![Image of app](https://github.com/ryantran2165/ryantran2165.github.io/blob/source/src/assets/crypto_online.jpg)
+![Image of app](https://raw.githubusercontent.com/ryantran2165/ryantran2165.github.io/source/src/assets/images/crypto_online.jpg)
