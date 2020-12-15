@@ -35,7 +35,9 @@ else
     <html>
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="icon" href="../assets/favicon.png">
+      <meta name="theme-color" content="#7fffd4">
+      <meta name="author" content="Ryan L. Tran">
+      <link rel="icon" href="https://raw.githubusercontent.com/ryantran2165/ryantran2165.github.io/source/public/favicon.png" />
       <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link href="../css/styles.css" rel="stylesheet">
@@ -60,7 +62,9 @@ function print_html($username)
     <html>
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="icon" href="../assets/favicon.png">
+      <meta name="theme-color" content="#7fffd4">
+      <meta name="author" content="Ryan L. Tran">
+      <link rel="icon" href="https://raw.githubusercontent.com/ryantran2165/ryantran2165.github.io/source/public/favicon.png" />
       <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link href="../css/styles.css" rel="stylesheet">
